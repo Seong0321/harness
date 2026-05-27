@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PetPalace - Premium Organic Salmon Dog Food</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .organic-blob {
+            clip-path: circle(50% at 50% 50%);
+            background: linear-gradient(135deg, #ffddb6 0%, #ffb347 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#ffb347",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#cce5ff",
+                        "tertiary-container": "#ffadab",
+                        "on-primary-fixed": "#2a1800",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fefccf",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "inverse-primary": "#ffb95a",
+                        "on-surface-variant": "#524535",
+                        "primary": "#845400",
+                        "primary-fixed-dim": "#ffb95a",
+                        "on-primary-container": "#704700",
+                        "on-secondary-fixed": "#001d31",
+                        "surface-dim": "#dedcb1",
+                        "inverse-on-surface": "#f5f3c7",
+                        "surface-container-low": "#f8f6c9",
+                        "outline-variant": "#d6c3b0",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#aacae9",
+                        "surface-container-highest": "#e6e5b9",
+                        "inverse-surface": "#323214",
+                        "background": "#fefccf",
+                        "on-secondary-container": "#43627d",
+                        "surface-container-high": "#eceabe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1d1d03",
+                        "secondary": "#42617d",
+                        "error-container": "#ffdad6",
+                        "outline": "#847463",
+                        "tertiary": "#9d4042",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#294a64",
+                        "on-primary-fixed-variant": "#643f00",
+                        "primary-fixed": "#ffddb6",
+                        "on-tertiary-container": "#8a3235",
+                        "surface-variant": "#e6e5b9",
+                        "on-background": "#1d1d03",
+                        "on-tertiary-fixed": "#410007",
+                        "surface-tint": "#845400",
+                        "surface": "#fefccf",
+                        "surface-container": "#f2f0c4",
+                        "on-tertiary-fixed-variant": "#7f292c",
+                        "secondary-container": "#bddefe",
+                        "tertiary-fixed": "#ffdad8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Quicksand"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Quicksand"],
+                        "headline-xl": ["Quicksand"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Quicksand"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-[0_4px_20px_rgba(74,63,53,0.08)] sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-gutter py-md max-w-container-max mx-auto">
+<a class="font-headline-md text-primary dark:text-primary-fixed font-black tracking-tight" href="#">PetPalace</a>
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-primary dark:text-primary-fixed border-b-4 border-primary-container pb-1 font-label-md text-label-md" href="#">Shop</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-container transition-all duration-300" href="#">Grooming</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-container transition-all duration-300" href="#">Hotel</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-container transition-all duration-300" href="#">Best Sellers</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary-container transition-all duration-300" href="#">Deals</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined text-primary p-xs active:scale-95 transform transition-transform duration-200">shopping_cart</button>
+<button class="material-symbols-outlined text-primary p-xs active:scale-95 transform transition-transform duration-200">account_circle</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-xl">
+<!-- Product Detail Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-start mb-xl">
+<!-- Left Side: Image Gallery -->
+<div class="relative group">
+<div class="absolute -top-10 -left-10 w-64 h-64 organic-blob opacity-20 -z-10 animate-pulse"></div>
+<div class="bg-surface-container-lowest rounded-lg p-md shadow-[0_4px_20px_rgba(74,63,53,0.08)] overflow-hidden">
+<img alt="Premium Organic Salmon Dog Food" class="w-full h-auto object-cover rounded-lg transform transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjYQAjoxoJDjD_sHRglHpDsrgt8Haqn7VFq5TsXso9fcaH0hhQX4yNCMFUnvDDrArdHE9BuI646nW0FOcMvAbot8L95-Zo7t5Mux-0KflIgoj0DUX0QE0q9T1y9iYwX-6qbljHsNgVNE83K79q3QqyPL-mc9I1rheombdGD8C4elcR7I7e8y8o4XpL0bay7GJ3j7p119Z8PLbKL8rBPTgzqSa_khc9bQZDguB_icgiecV6ehiujmy-af0S_SsPYCCBwRb2OTW6ckfa"/>
+</div>
+<div class="flex gap-sm mt-md">
+<div class="w-24 h-24 rounded-lg bg-surface-container-high cursor-pointer ring-2 ring-primary-container overflow-hidden">
+<img alt="Thumb 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjYQAjoxoJDjD_sHRglHpDsrgt8Haqn7VFq5TsXso9fcaH0hhQX4yNCMFUnvDDrArdHE9BuI646nW0FOcMvAbot8L95-Zo7t5Mux-0KflIgoj0DUX0QE0q9T1y9iYwX-6qbljHsNgVNE83K79q3QqyPL-mc9I1rheombdGD8C4elcR7I7e8y8o4XpL0bay7GJ3j7p119Z8PLbKL8rBPTgzqSa_khc9bQZDguB_icgiecV6ehiujmy-af0S_SsPYCCBwRb2OTW6ckfa"/>
+</div>
+<!-- Additional thumb placeholders could go here -->
+</div>
+</div>
+<!-- Right Side: Content -->
+<div class="flex flex-col gap-md">
+<div>
+<div class="flex items-center gap-xs mb-sm">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-md text-label-md">Best Seller</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-sm py-xs rounded-full font-label-md text-label-md">Organic</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-xs">Premium Organic Salmon Dog Food</h1>
+<div class="flex items-center gap-xs text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+<span class="text-on-surface-variant font-label-md ml-xs">(128 Reviews)</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-md flex flex-col gap-sm">
+<div class="flex items-baseline gap-sm">
+<span class="font-headline-lg text-headline-lg text-primary">$48.00</span>
+<span class="text-on-surface-variant line-through font-body-md">$56.00</span>
+<span class="text-tertiary font-label-md">Save 15%</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Nurture your companion with our wild-caught salmon recipe. Crafted with pure organic ingredients and slow-baked to preserve natural oils and vital nutrients. Perfect for skin and coat health.
+                    </p>
+</div>
+<div class="flex flex-col gap-sm">
+<label class="font-label-md text-on-surface">Bag Size</label>
+<div class="flex gap-sm">
+<button class="px-md py-sm rounded-full border-2 border-primary-container bg-surface-container-lowest text-on-surface font-label-md">5 lbs</button>
+<button class="px-md py-sm rounded-full border-2 border-outline-variant hover:border-primary-container transition-colors text-on-surface-variant font-label-md">12 lbs</button>
+<button class="px-md py-sm rounded-full border-2 border-outline-variant hover:border-primary-container transition-colors text-on-surface-variant font-label-md">25 lbs</button>
+</div>
+</div>
+<div class="flex gap-md mt-sm">
+<div class="flex items-center border border-outline rounded-full px-md">
+<button class="text-primary hover:text-primary-container p-xs" onclick="updateQty(-1)">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<span class="w-12 text-center font-bold" id="qty">1</span>
+<button class="text-primary hover:text-primary-container p-xs" onclick="updateQty(1)">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<button class="flex-1 bg-primary-container text-on-primary-container py-md px-xl rounded-full font-label-md text-label-md font-bold shadow-[0_2px_4px_rgba(74,63,53,0.1)] hover:shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Add to Cart
+                    </button>
+</div>
+<div class="grid grid-cols-2 gap-sm mt-md">
+<div class="flex items-center gap-sm text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+                        Free Shipping over $50
+                    </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+                        100% Organic Certified
+                    </div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Nutrition & Reviews -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Nutrition Facts (Span 2) -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-lg p-lg shadow-[0_4px_20px_rgba(74,63,53,0.08)]">
+<div class="flex items-center gap-sm mb-lg">
+<div class="p-sm bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">set_meal</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg">Nutrition Facts</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-md">
+<div class="flex flex-col border-b border-outline-variant pb-sm">
+<span class="text-on-surface-variant font-label-sm">Crude Protein</span>
+<span class="font-headline-md text-headline-md">26.0%</span>
+<div class="h-2 bg-surface-container-high rounded-full mt-xs overflow-hidden">
+<div class="h-full bg-primary-container w-[75%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col border-b border-outline-variant pb-sm">
+<span class="text-on-surface-variant font-label-sm">Crude Fat</span>
+<span class="font-headline-md text-headline-md">15.0%</span>
+<div class="h-2 bg-surface-container-high rounded-full mt-xs overflow-hidden">
+<div class="h-full bg-primary-container w-[50%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col border-b border-outline-variant pb-sm">
+<span class="text-on-surface-variant font-label-sm">Omega-3 Fatty Acids</span>
+<span class="font-headline-md text-headline-md">1.2%</span>
+<div class="h-2 bg-surface-container-high rounded-full mt-xs overflow-hidden">
+<div class="h-full bg-primary-container w-[90%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col border-b border-outline-variant pb-sm">
+<span class="text-on-surface-variant font-label-sm">Calories</span>
+<span class="font-headline-md text-headline-md">410 kcal</span>
+<span class="text-on-surface-variant text-[10px]">per cup</span>
+</div>
+</div>
+<div class="mt-lg">
+<h3 class="font-label-md text-on-surface mb-sm">Main Ingredients</h3>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-surface-container-high px-sm py-xs rounded-lg text-on-surface-variant font-label-sm italic">Wild-Caught Salmon</span>
+<span class="bg-surface-container-high px-sm py-xs rounded-lg text-on-surface-variant font-label-sm italic">Brown Rice</span>
+<span class="bg-surface-container-high px-sm py-xs rounded-lg text-on-surface-variant font-label-sm italic">Organic Spinach</span>
+<span class="bg-surface-container-high px-sm py-xs rounded-lg text-on-surface-variant font-label-sm italic">Blueberries</span>
+<span class="bg-surface-container-high px-sm py-xs rounded-lg text-on-surface-variant font-label-sm italic">Flaxseed</span>
+</div>
+</div>
+</div>
+<!-- Review Summary -->
+<div class="bg-primary-fixed text-on-primary-fixed rounded-lg p-lg shadow-[0_4px_20px_rgba(74,63,53,0.08)] flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl text-headline-xl mb-xs">4.8</span>
+<div class="flex gap-xs mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-label-md mb-md">Based on 128 Customer Reviews</p>
+<button class="bg-on-primary-fixed text-primary-fixed w-full py-sm rounded-full font-bold hover:opacity-90 transition-opacity">Write a Review</button>
+</div>
+<!-- Customer Review Cards -->
+<div class="md:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md mt-md">
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex flex-col">
+<span class="font-bold font-label-md">Sarah J.</span>
+<span class="text-on-surface-variant text-[10px]">Verified Buyer</span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic font-body-md">"My golden retriever has such a shiny coat now! She used to be a picky eater but she devours this salmon mix every single time."</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex flex-col">
+<span class="font-bold font-label-md">Mark R.</span>
+<span class="text-on-surface-variant text-[10px]">Verified Buyer</span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic font-body-md">"Great quality food. The organic aspect is really important to us. Only docking one star because shipping took a bit longer than expected."</p>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-sm border border-outline-variant/30">
+<div class="flex justify-between items-start mb-sm">
+<div class="flex flex-col">
+<span class="font-bold font-label-md">Emily W.</span>
+<span class="text-on-surface-variant text-[10px]">Verified Buyer</span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic font-body-md">"Finally found a kibble that doesn't upset my bulldog's stomach. The ingredients are top-notch and it smells fresh!"</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low border-t border-outline-variant rounded-t-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-gutter py-xl max-w-container-max mx-auto w-full text-center md:text-left">
+<div class="flex flex-col gap-sm">
+<span class="font-headline-sm text-primary dark:text-primary-fixed font-bold">PetPalace</span>
+<p class="text-on-surface-variant font-body-md">© 2024 PetPalace. All rights reserved. Nurturing the bond between you and your pets.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-sm">Links</h4>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant font-normal font-label-sm hover:text-primary transition-colors duration-200 hover:underline" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant font-normal font-label-sm hover:text-primary transition-colors duration-200 hover:underline" href="#">Customer Support</a></li>
+<li><a class="text-on-surface-variant font-normal font-label-sm hover:text-primary transition-colors duration-200 hover:underline" href="#">Shipping Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-sm">Policy</h4>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant font-normal font-label-sm hover:text-primary transition-colors duration-200 hover:underline" href="#">Privacy Center</a></li>
+<li><a class="text-on-surface-variant font-normal font-label-sm hover:text-primary transition-colors duration-200 hover:underline" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-primary">Stay Connected</h4>
+<div class="flex justify-center md:justify-start gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        let quantity = 1;
+        const qtyEl = document.getElementById('qty');
+
+        function updateQty(val) {
+            quantity += val;
+            if (quantity < 1) quantity = 1;
+            qtyEl.innerText = quantity;
+        }
+
+        // Simple button active effect simulation
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>

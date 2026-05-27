@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PetPalace | Book Your Pet's Stay &amp; Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#ffb347",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#cce5ff",
+                        "tertiary-container": "#ffadab",
+                        "on-primary-fixed": "#2a1800",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fefccf",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "inverse-primary": "#ffb95a",
+                        "on-surface-variant": "#524535",
+                        "primary": "#845400",
+                        "primary-fixed-dim": "#ffb95a",
+                        "on-primary-container": "#704700",
+                        "on-secondary-fixed": "#001d31",
+                        "surface-dim": "#dedcb1",
+                        "inverse-on-surface": "#f5f3c7",
+                        "surface-container-low": "#f8f6c9",
+                        "outline-variant": "#d6c3b0",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#aacae9",
+                        "surface-container-highest": "#e6e5b9",
+                        "inverse-surface": "#323214",
+                        "background": "#fefccf",
+                        "on-secondary-container": "#43627d",
+                        "surface-container-high": "#eceabe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1d1d03",
+                        "secondary": "#42617d",
+                        "error-container": "#ffdad6",
+                        "outline": "#847463",
+                        "tertiary": "#9d4042",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#294a64",
+                        "on-primary-fixed-variant": "#643f00",
+                        "primary-fixed": "#ffddb6",
+                        "on-tertiary-container": "#8a3235",
+                        "surface-variant": "#e6e5b9",
+                        "on-background": "#1d1d03",
+                        "on-tertiary-fixed": "#410007",
+                        "surface-tint": "#845400",
+                        "surface": "#fefccf",
+                        "surface-container": "#f2f0c4",
+                        "on-tertiary-fixed-variant": "#7f292c",
+                        "secondary-container": "#bddefe",
+                        "tertiary-fixed": "#ffdad8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Quicksand"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Quicksand"],
+                        "headline-xl": ["Quicksand"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Quicksand"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .sun-kissed-shadow {
+            box-shadow: 0 4px 20px rgba(74, 63, 53, 0.08);
+        }
+        .blob-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .step-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hide-step {
+            opacity: 0;
+            transform: translateX(20px);
+            pointer-events: none;
+            position: absolute;
+        }
+        .show-step {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim shadow-[0_4px_20px_rgba(74,63,53,0.08)] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-gutter py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-base">
+<span class="font-headline-md text-primary dark:text-primary-fixed font-black tracking-tight">PetPalace</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary-container transition-all duration-300" href="#">Shop</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary-container transition-all duration-300" href="#">Grooming</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary-container transition-all duration-300" href="#">Hotel</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary-container transition-all duration-300" href="#">Best Sellers</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary-container transition-all duration-300" href="#">Deals</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary p-xs active:scale-95 transition-transform">shopping_cart</button>
+<button class="material-symbols-outlined text-primary p-xs active:scale-95 transition-transform">account_circle</button>
+</div>
+</div>
+</header>
+<main class="pt-[100px] pb-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-xl">
+<div class="relative h-[300px] md:h-[450px] rounded-lg overflow-hidden sun-kissed-shadow">
+<img alt="Pet Grooming" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV4OuWvRL1yZMB3YYOcJzXRCqGfKO9KHJTO_R1dljbErmOsLytUzP83feUBRcMgKEPl714w_d1hgXFNK7x9P11cqy-JsqAr6viUhnZikzcC1X_QJCQIu2BcbgIozz5-UQ5cWeGMcTe1MkRALU74GPX9tIanQ79ZTM-XlJPEil_271pXu9S3eUWcEw8NPutCfn6l8Q56T7ot44rR0aILuzQkL-fl18V1RN2cj9Fxnoz3kWG4cu_hFiPq6e0ZOUrhqqKokpqZlp5clSp"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent flex items-center p-lg">
+<div class="max-w-md text-surface-container-lowest">
+<h1 class="font-headline-xl text-headline-xl mb-sm leading-tight">Expert Care for Your Best Friend</h1>
+<p class="font-body-lg text-body-lg opacity-90">Book professional grooming, daycare, or luxury pet hotel stays in just a few clicks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Flow Container -->
+<section class="max-w-4xl mx-auto px-gutter">
+<div class="bg-surface-container-lowest rounded-lg sun-kissed-shadow p-md md:p-lg relative overflow-hidden">
+<!-- Progress Indicator -->
+<div class="mb-xl">
+<div class="flex justify-between items-center mb-base">
+<span class="font-label-md text-primary uppercase tracking-widest" id="step-label">Step 1 of 4</span>
+<span class="font-headline-md text-headline-md" id="step-title">Select Service</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container transition-all duration-500 ease-out" id="progress-bar" style="width: 25%"></div>
+</div>
+</div>
+<form id="booking-form" onsubmit="return false">
+<!-- STEP 1: Select Service -->
+<div class="step-transition show-step grid grid-cols-1 md:grid-cols-3 gap-md" id="step-1">
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="service" type="radio" value="grooming"/>
+<div class="p-lg rounded-lg border-2 border-surface-container-high bg-surface-container-lowest peer-checked:border-primary-container peer-checked:bg-secondary-container/10 transition-all duration-300 text-center">
+<div class="w-16 h-16 bg-secondary-container/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-3xl">content_cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Grooming</h3>
+<p class="text-label-sm text-on-surface-variant">Full wash, trim &amp; style</p>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="service" type="radio" value="hotel"/>
+<div class="p-lg rounded-lg border-2 border-surface-container-high bg-surface-container-lowest peer-checked:border-primary-container peer-checked:bg-secondary-container/10 transition-all duration-300 text-center">
+<div class="w-16 h-16 bg-secondary-container/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-3xl">hotel</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Hotel</h3>
+<p class="text-label-sm text-on-surface-variant">Luxury overnight stay</p>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="service" type="radio" value="daycare"/>
+<div class="p-lg rounded-lg border-2 border-surface-container-high bg-surface-container-lowest peer-checked:border-primary-container peer-checked:bg-secondary-container/10 transition-all duration-300 text-center">
+<div class="w-16 h-16 bg-secondary-container/20 text-secondary rounded-full flex items-center justify-center mx-auto mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-3xl">pets</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Daycare</h3>
+<p class="text-label-sm text-on-surface-variant">Playtime and socializing</p>
+</div>
+</label>
+</div>
+<!-- STEP 2: Choose Date -->
+<div class="step-transition hide-step" id="step-2">
+<div class="bg-surface-container-low rounded-lg p-md">
+<div class="flex items-center justify-between mb-md">
+<h4 class="font-headline-md">November 2024</h4>
+<div class="flex gap-sm">
+<button class="p-xs hover:bg-surface-container rounded-full"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-xs hover:bg-surface-container rounded-full"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-xs text-center mb-sm">
+<div class="font-label-md text-on-surface-variant">Su</div>
+<div class="font-label-md text-on-surface-variant">Mo</div>
+<div class="font-label-md text-on-surface-variant">Tu</div>
+<div class="font-label-md text-on-surface-variant">We</div>
+<div class="font-label-md text-on-surface-variant">Th</div>
+<div class="font-label-md text-on-surface-variant">Fr</div>
+<div class="font-label-md text-on-surface-variant">Sa</div>
+</div>
+<div class="grid grid-cols-7 gap-xs text-center">
+<!-- Calendar Days Placeholder -->
+<div class="p-sm text-on-surface-variant opacity-25">27</div>
+<div class="p-sm text-on-surface-variant opacity-25">28</div>
+<div class="p-sm text-on-surface-variant opacity-25">29</div>
+<div class="p-sm text-on-surface-variant opacity-25">30</div>
+<div class="p-sm text-on-surface-variant opacity-25">31</div>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">1</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">2</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">3</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">4</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">5</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">6</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">7</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">8</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">9</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">10</button>
+<button class="p-sm bg-primary-container text-on-primary-fixed rounded-lg font-bold" type="button">11</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">12</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">13</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">14</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">15</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">16</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">17</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">18</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">19</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">20</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">21</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">22</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">23</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">24</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">25</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">26</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">27</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">28</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">29</button>
+<button class="p-sm hover:bg-primary-container/20 rounded-lg transition-colors" type="button">30</button>
+</div>
+</div>
+</div>
+<!-- STEP 3: Select Time Slot -->
+<div class="step-transition hide-step" id="step-3">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
+<button class="p-md rounded-lg border-2 border-surface-container hover:border-primary-container transition-all text-center focus:ring-2 focus:ring-primary-container outline-none" type="button">
+<span class="block font-headline-md">09:00</span>
+<span class="text-label-sm text-on-surface-variant">Morning</span>
+</button>
+<button class="p-md rounded-lg border-2 border-primary-container bg-primary-container/10 transition-all text-center focus:ring-2 focus:ring-primary-container outline-none" type="button">
+<span class="block font-headline-md">10:30</span>
+<span class="text-label-sm text-on-surface-variant">Morning</span>
+</button>
+<button class="p-md rounded-lg border-2 border-surface-container hover:border-primary-container transition-all text-center focus:ring-2 focus:ring-primary-container outline-none" type="button">
+<span class="block font-headline-md">13:00</span>
+<span class="text-label-sm text-on-surface-variant">Afternoon</span>
+</button>
+<button class="p-md rounded-lg border-2 border-surface-container hover:border-primary-container transition-all text-center focus:ring-2 focus:ring-primary-container outline-none" type="button">
+<span class="block font-headline-md">14:30</span>
+<span class="text-label-sm text-on-surface-variant">Afternoon</span>
+</button>
+<button class="p-md rounded-lg border-2 border-surface-container hover:border-primary-container transition-all text-center focus:ring-2 focus:ring-primary-container outline-none opacity-50 cursor-not-allowed" disabled="" type="button">
+<span class="block font-headline-md">16:00</span>
+<span class="text-label-sm text-error">Booked</span>
+</button>
+<button class="p-md rounded-lg border-2 border-surface-container hover:border-primary-container transition-all text-center focus:ring-2 focus:ring-primary-container outline-none" type="button">
+<span class="block font-headline-md">17:30</span>
+<span class="text-label-sm text-on-surface-variant">Evening</span>
+</button>
+</div>
+</div>
+<!-- STEP 4: Pet Information -->
+<div class="step-transition hide-step space-y-md" id="step-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-md mb-xs">Pet Name</label>
+<input class="w-full bg-surface-container-low border-2 border-transparent focus:border-secondary focus:ring-0 rounded-lg p-md transition-all" placeholder="e.g. Luna" type="text"/>
+</div>
+<div>
+<label class="block font-label-md mb-xs">Breed</label>
+<input class="w-full bg-surface-container-low border-2 border-transparent focus:border-secondary focus:ring-0 rounded-lg p-md transition-all" placeholder="e.g. Golden Retriever" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md mb-xs">Weight (kg)</label>
+<div class="flex gap-sm overflow-x-auto pb-sm no-scrollbar">
+<button class="flex-shrink-0 px-lg py-sm rounded-full bg-surface-container-low hover:bg-secondary-container transition-colors text-label-md" type="button">Small (0-10kg)</button>
+<button class="flex-shrink-0 px-lg py-sm rounded-full bg-secondary-container text-on-secondary-container font-bold text-label-md" type="button">Medium (10-25kg)</button>
+<button class="flex-shrink-0 px-lg py-sm rounded-full bg-surface-container-low hover:bg-secondary-container transition-colors text-label-md" type="button">Large (25kg+)</button>
+</div>
+</div>
+<div>
+<label class="block font-label-md mb-xs">Special Instructions</label>
+<textarea class="w-full bg-surface-container-low border-2 border-transparent focus:border-secondary focus:ring-0 rounded-lg p-md transition-all h-32" placeholder="Tell us about allergies, temperaments, or specific needs..."></textarea>
+</div>
+</div>
+<!-- Navigation Controls -->
+<div class="mt-xl flex justify-between items-center">
+<button class="flex items-center gap-xs font-label-md text-on-surface-variant hover:text-primary transition-colors invisible" id="prev-btn" onclick="changeStep(-1)" type="button">
+<span class="material-symbols-outlined">arrow_back</span> Back
+                        </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary px-xl py-md rounded-full font-bold sun-kissed-shadow active:scale-95 transition-all flex items-center gap-sm" id="next-btn" onclick="changeStep(1)" type="button">
+                            Continue <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Trust Badges -->
+<div class="mt-lg grid grid-cols-2 md:grid-cols-4 gap-md opacity-70">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="text-label-sm">Certified Professionals</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">favorite</span>
+<span class="text-label-sm">Loving Environment</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">update</span>
+<span class="text-label-sm">Daily Photo Updates</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">local_hospital</span>
+<span class="text-label-sm">Vet on Standby</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low border-t border-outline-variant rounded-t-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md px-gutter py-xl max-w-container-max mx-auto w-full text-center md:text-left">
+<div>
+<span class="font-headline-sm text-primary dark:text-primary-fixed font-bold block mb-md">PetPalace</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Premium pet care services designed with love for your furry family members.</p>
+</div>
+<div>
+<h4 class="font-label-md mb-md font-bold uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">About Us</a></li>
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Customer Support</a></li>
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Shipping Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md mb-md font-bold uppercase tracking-wider">Services</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Grooming</a></li>
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Pet Hotel</a></li>
+<li><a class="font-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Puppy Daycare</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md mb-md font-bold uppercase tracking-wider">Contact</h4>
+<p class="font-label-sm text-on-surface-variant">123 Paws Avenue, Pet Valley<br/>support@petpalace.com<br/>+1 (555) PET-CARE</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-lg border-t border-outline-variant text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 PetPalace. All rights reserved. Nurturing the bond between you and your pets.</p>
+</div>
+</footer>
+<script>
+        let currentStep = 1;
+        const totalSteps = 4;
+        const stepTitles = ["Select Service", "Choose Date", "Select Time slot", "Pet Information"];
+
+        function changeStep(delta) {
+            const nextStep = currentStep + delta;
+            
+            if (nextStep < 1 || nextStep > totalSteps) {
+                if(nextStep > totalSteps) {
+                    alert('Booking Request Sent! We will contact you shortly.');
+                }
+                return;
+            }
+
+            // Hide current step
+            document.getElementById(`step-${currentStep}`).classList.replace('show-step', 'hide-step');
+            
+            // Show next step
+            currentStep = nextStep;
+            setTimeout(() => {
+                document.getElementById(`step-${currentStep}`).classList.replace('hide-step', 'show-step');
+            }, 50);
+
+            // Update UI
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('step-label').innerText = `Step ${currentStep} of ${totalSteps}`;
+            document.getElementById('step-title').innerText = stepTitles[currentStep - 1];
+            
+            // Buttons Visibility
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            if (currentStep === 1) {
+                prevBtn.classList.add('invisible');
+            } else {
+                prevBtn.classList.remove('invisible');
+            }
+
+            if (currentStep === totalSteps) {
+                nextBtn.innerHTML = 'Book Now <span class="material-symbols-outlined">check_circle</span>';
+            } else {
+                nextBtn.innerHTML = 'Continue <span class="material-symbols-outlined">arrow_forward</span>';
+            }
+        }
+    </script>
+</body></html>
